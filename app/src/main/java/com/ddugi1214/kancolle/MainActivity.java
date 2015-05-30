@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -19,6 +20,13 @@ public class MainActivity extends ActionBarActivity {
         set.setJavaScriptEnabled(true);
         set.setSupportZoom(true);
         mWeb.loadUrl("http://www.dmm.com/netgame/social/-/gadgets/=/app_id=854854/");
+    }
+
+    class MyWebClient extends WebViewClient {
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return true;
+        }
     }
 
     @Override
