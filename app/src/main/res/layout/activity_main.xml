@@ -10,5 +10,12 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         />
-
+    <ProgressBar
+        style="android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="4dp"
+        android:id="@+id/ProgressBar"
+        android:max="100"
+        android:progress="0"
+        />
 </LinearLayout>
